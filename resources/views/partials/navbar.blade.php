@@ -34,7 +34,7 @@
 
             {{-- ========================================================================= --}}
             {{-- [CUSTOMIZE HERE]: SOCIAL MEDIA ICONS (Right side of navbar)               --}}
-            {{-- Circular outlined icons matching reference guide: Facebook, Instagram, YT  --}}
+            {{-- Circular outlined social icons for Facebook and GitHub.                   --}}
             {{-- Modify URLs or add GitHub/LinkedIn as desired.                            --}}
             {{-- ========================================================================= --}}
             <div class="hidden sm:flex items-center space-x-3">
@@ -45,24 +45,6 @@
                    title="Facebook Profile"
                    class="social-circle-btn">
                     <i class="fa-brands fa-facebook-f text-sm"></i>
-                </a>
-
-                {{-- Instagram --}}
-                <a href="{{ $profile['socials']['instagram'] ?? '#' }}" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   title="Instagram Profile"
-                   class="social-circle-btn">
-                    <i class="fa-brands fa-instagram text-sm"></i>
-                </a>
-
-                {{-- YouTube --}}
-                <a href="{{ $profile['socials']['youtube'] ?? '#' }}" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   title="YouTube Channel"
-                   class="social-circle-btn">
-                    <i class="fa-brands fa-youtube text-sm"></i>
                 </a>
 
                 {{-- GitHub (Optional handy extra link) --}}
@@ -98,8 +80,6 @@
         <div class="pt-4 border-t border-slate-100 flex items-center space-x-3">
             <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Follow:</span>
             <a href="{{ $profile['socials']['facebook'] ?? '#' }}" target="_blank" class="social-circle-btn"><i class="fa-brands fa-facebook-f text-sm"></i></a>
-            <a href="{{ $profile['socials']['instagram'] ?? '#' }}" target="_blank" class="social-circle-btn"><i class="fa-brands fa-instagram text-sm"></i></a>
-            <a href="{{ $profile['socials']['youtube'] ?? '#' }}" target="_blank" class="social-circle-btn"><i class="fa-brands fa-youtube text-sm"></i></a>
             @if(!empty($profile['socials']['github']))
             <a href="{{ $profile['socials']['github'] }}" target="_blank" class="social-circle-btn"><i class="fa-brands fa-github text-sm"></i></a>
             @endif

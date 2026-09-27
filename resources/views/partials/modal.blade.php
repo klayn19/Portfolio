@@ -49,11 +49,27 @@
                     Full project description will appear here.
                 </p>
 
+                {{-- Demo Accounts Section --}}
+                <div id="modalDemoAccounts" class="mb-6 hidden">
+                    <span class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Demo Accounts:</span>
+                    <div class="rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-slate-700">
+                        <div id="modalDemoAccountsContent"></div>
+                    </div>
+                </div>
+
                 {{-- Tech Stack Tags Container --}}
                 <div class="mb-8">
                     <span class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Technologies Used:</span>
                     <div id="modalTags" class="flex flex-wrap gap-2">
                         <!-- Dynamically filled with tags via openProjectModal() JS -->
+                    </div>
+                </div>
+
+                {{-- Screenshots Container --}}
+                <div id="modalScreenshots" class="mb-8 hidden">
+                    <span class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Screenshots:</span>
+                    <div id="modalScreenshotsGrid" class="grid grid-cols-1 gap-4">
+                        <!-- Dynamically filled with screenshots via openProjectModal() JS -->
                     </div>
                 </div>
 

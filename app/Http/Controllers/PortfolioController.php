@@ -26,22 +26,19 @@ class PortfolioController extends Controller
             'bio'         => "Hey, I'm Klein! I'm a 4th-year student passionate about web development and building clean, practical applications. I mainly work with Laravel, PHP, MySQL, and Tailwind CSS. Always curious to learn new tools and ready to take on junior developer or internship opportunities.",
             
             // Avatar image path (Place your image inside public/images/)
-            // To use your own photo, change this to: asset('images/your-photo.png') or asset('images/your-photo.jpg')
-            'avatar'      => 'images/avatar.svg',
+            // Use the real uploaded photo file already saved in the project.
+            'avatar'      => 'images/klayn.jpg',
             
             // Your contact & location details
-            'email'       => 'klein@example.com',
-            'phone'       => '+63 912 345 6789',
-            'location'    => 'Open to Remote & On-Site',
+            'email'       => 'klaynsantos19@example.com',
+            'phone'       => '+63 976 377 1517',
+            'location'    => 'Dasmariñas, Cavite',
             'availability'=> 'Available for Internships & Junior Roles',
             
             // Social media links
             'socials'     => [
-                'facebook'  => 'https://facebook.com',
-                'instagram' => 'https://instagram.com',
-                'youtube'   => 'https://youtube.com',
-                'github'    => 'https://github.com',
-                'linkedin'  => 'https://linkedin.com',
+                'facebook'  => 'https://www.facebook.com/Klayn19',
+                'github'    => 'https://github.com/klayn19'
             ],
         ];
 
@@ -71,7 +68,7 @@ class PortfolioController extends Controller
                 'long_description' => 'An educational web application built with Laravel and MySQL. Features role-based dashboards for Teachers, Students, and Administrators. Teachers can manage sections, create subject quiz questions, and view student analytics. Includes an automated REST API consumed by a Unity quiz game to fetch questions dynamically.',
                 'image'       => 'images/projects/project1.svg',
                 'tags'        => ['Laravel', 'PHP', 'MySQL', 'Unity Game API', 'Docker', 'Blade'],
-                'live_url'    => '#',
+                'live_url'    => 'https://clash-of-subjects.onrender.com',
                 'github_url'  => 'https://github.com/klayn19/COS_LARAVEL',
                 'featured'    => true,
             ],
@@ -84,8 +81,13 @@ class PortfolioController extends Controller
                 'long_description' => 'Developed with PHP, MySQL, and JavaScript. Features dedicated dashboards for Admins, Teachers, and Students. Supports RFID-based and manual student attendance, grade recording with print-ready reports, account lockout security, and email password recovery via PHPMailer.',
                 'image'       => 'images/projects/project2.svg',
                 'tags'        => ['PHP', 'MySQL', 'JavaScript', 'RFID Attendance', 'PHPMailer', 'Bootstrap'],
-                'live_url'    => '#',
-                'github_url'  => 'https://github.com/klayn19/SAM',
+                'live_url'    => 'https://sam-system.infinityfree.me',
+                'github_url'  => 'https://github.com/klayn19/SAM-system',
+                'demo_accounts' => [
+                    ['role' => 'Admin', 'email' => 'demoadmin@sam.com', 'password' => 'Demo@123'],
+                    ['role' => 'Teacher', 'email' => 'demoteacher@sam.com', 'password' => 'Demo@123'],
+                    ['role' => 'Student', 'email' => 'demostudent@sam.com', 'password' => 'Demo@123'],
+                ],
                 'featured'    => true,
             ],
             [
@@ -97,8 +99,8 @@ class PortfolioController extends Controller
                 'long_description' => 'A responsive web application built with PHP, Bootstrap, and MySQL featuring a stylized user interface. Includes account registration, credential validation, session handling, and access to curated music playlists with smooth navigation.',
                 'image'       => 'images/projects/project3.svg',
                 'tags'        => ['PHP', 'Bootstrap', 'MySQL', 'HTML5/CSS3', 'JavaScript'],
-                'live_url'    => '#',
-                'github_url'  => '#',
+                'live_url'    => 'https://klayn19.github.io/playlist/',
+                'github_url'  => 'https://github.com/klayn19/playlist',
                 'featured'    => true,
             ],
             [
@@ -109,9 +111,16 @@ class PortfolioController extends Controller
                 'description' => 'A desktop coffee shop POS and inventory management system with dark-mode GUI, SQLite database, and product catalog.',
                 'long_description' => 'Developed in Python using CustomTkinter and SQLite. Provides full inventory and menu management for coffee shops, including item pricing, categorized product listings with images, ingredient stock-level tracking, and sales transaction logging.',
                 'image'       => 'images/projects/project4.svg',
+                'screenshots' => [
+                    'images/coffee shop/Screenshot 2026-09-27 164701.png',
+                    'images/coffee shop/Screenshot 2026-09-27 164710.png',
+                    'images/coffee shop/Screenshot 2026-09-27 164715.png',
+                    'images/coffee shop/Screenshot 2026-09-27 164721.png',
+                    'images/coffee shop/Screenshot 2026-09-27 164727.png',
+                ],
                 'tags'        => ['Python', 'CustomTkinter', 'SQLite', 'Pillow', 'GUI Application'],
                 'live_url'    => '#',
-                'github_url'  => '#',
+                'github_url'  => 'https://github.com/klayn19/coffeeShop-Menu-inventory',
                 'featured'    => true,
             ],
         ];
@@ -132,13 +141,12 @@ class PortfolioController extends Controller
                 ['name' => 'PHP (OOP & Fundamentals)', 'level' => 82, 'icon' => 'fa-brands fa-php'],
                 ['name' => 'Laravel Framework', 'level' => 80, 'icon' => 'fa-brands fa-laravel'],
                 ['name' => 'RESTful APIs & CRUD', 'level' => 78, 'icon' => 'fa-solid fa-network-wired'],
-                ['name' => 'MVC Architecture', 'level' => 80, 'icon' => 'fa-solid fa-layer-group'],
                 ['name' => 'Authentication & Sessions', 'level' => 75, 'icon' => 'fa-solid fa-shield-halved'],
             ],
             'Database' => [
                 ['name' => 'MySQL / MariaDB', 'level' => 82, 'icon' => 'fa-solid fa-database'],
                 ['name' => 'Relational DB Design', 'level' => 78, 'icon' => 'fa-solid fa-server'],
-                ['name' => 'SQL Queries & Eloquent ORM', 'level' => 80, 'icon' => 'fa-solid fa-table'],
+                ['name' => 'SQL Queries', 'level' => 80, 'icon' => 'fa-solid fa-table'],
                 ['name' => 'SQLite', 'level' => 75, 'icon' => 'fa-solid fa-hard-drive'],
                 ['name' => 'Migrations & Seeders', 'level' => 82, 'icon' => 'fa-solid fa-seedling'],
             ],
@@ -153,11 +161,11 @@ class PortfolioController extends Controller
 
         // =========================================================================
         // [CUSTOMIZE HERE]: WORK EXPERIENCE & CAREER TIMELINE
-        // Authentic college student journey: Capstone, Internships, Coursework
+        // Academic timeline: Capstone and coursework
         // =========================================================================
         $experience = [
             [
-                'period'   => '2024 - Present',
+            'period'   => '2025 - 2026',
                 'role'     => 'Lead Developer (Capstone Project)',
                 'company'  => 'University Capstone Team',
                 'location' => 'Campus / Hybrid',
@@ -169,26 +177,15 @@ class PortfolioController extends Controller
                 ],
             ],
             [
-                'period'   => '2024',
-                'role'     => 'Web Developer / IT Intern',
-                'company'  => 'Internship Program',
-                'location' => 'On-site / Hybrid',
-                'summary'  => 'Assisted in updating web interfaces, fixing layout bugs, and writing simple database queries under mentor guidance.',
-                'achievements' => [
-                    'Built reusable frontend components using HTML, CSS, and JavaScript',
-                    'Supported the team in testing features and fixing reported bugs',
-                    'Learned real-world workflow, teamwork, and code review practices',
-                ],
-            ],
-            [
-                'period'   => '2021 - Present',
-                'role'     => '4th Year College Student (BSIT / BSCS)',
+                'period'   => '2023 - Present',
+                'role'     => '4th Year Information Technology Student',
                 'company'  => 'University',
                 'location' => 'College Studies',
-                'summary'  => 'Studying computer science and information technology fundamentals with a focus on web development and programming.',
+                'summary'  => 'Studying Information Technology with a focus on web development and programming.',
                 'achievements' => [
                     'Completed coursework in Data Structures, OOP, Web Systems, and Database Management',
                     'Consistently developed hands-on lab projects and software assignments',
+                    'Recognized as a Dean\'s Lister three times during 2nd and 3rd year',
                 ],
             ],
         ];
@@ -207,12 +204,58 @@ class PortfolioController extends Controller
                 'badge'    => 'Capstone Passed',
             ],
             [
-                'year'     => '2024',
-                'type'     => 'Hackathon',
-                'title'    => 'Campus Tech Hackathon',
-                'location' => 'University Tech Club',
-                'summary'  => 'Collaborated with fellow students in a 24-hour hackathon to build a community web tool prototype.',
+                'year'     => '2025',
+                'type'     => 'Certificate',
+                'title'    => 'CTRL + LEAD: Commanding the Future of Digital Leadership',
+                'location' => 'PCU Dasmariñas',
+                'summary'  => 'Participated in a seminar focused on digital leadership and the skills needed to guide technology-driven teams.',
                 'badge'    => 'Participant',
+                'image'    => 'images/certification/digital leadership.png',
+            ],
+            [
+                'year'     => '2025',
+                'type'     => 'Certificate',
+                'title'    => 'Thinking Beyond the Software: Idea-Driven Design',
+                'location' => 'PCU Dasmariñas',
+                'summary'  => 'Attended a seminar on idea-driven design and approaches to creating thoughtful software solutions.',
+                'badge'    => 'Participant',
+                'image'    => 'images/certification/Screenshot 2026-09-27 183138.png',
+            ],
+            [
+                'year'     => '2025',
+                'type'     => 'Certificate',
+                'title'    => 'First Faculty Interdisciplinary Research Congress',
+                'location' => 'PCU Dasmariñas',
+                'summary'  => 'Participated in an interdisciplinary research congress highlighting research innovation and a sustainable future.',
+                'badge'    => 'Participant',
+                'image'    => 'images/certification/Screenshot 2026-09-27 183207.png',
+            ],
+            [
+                'year'     => '2024',
+                'type'     => 'Certificate',
+                'title'    => 'Unlocking Cloud Careers: Students’ Guide to AWS Cloud Club',
+                'location' => 'PCU Cavite Conference Center',
+                'summary'  => 'Joined a seminar introducing AWS Cloud Club and attended its launch, “Crafting the Future with Innovation and Beyond.”',
+                'badge'    => 'Participant',
+                'image'    => 'images/certification/12.png',
+            ],
+            [
+                'year'     => '2024',
+                'type'     => 'Certificate',
+                'title'    => 'A Glimpse of the Endless Sky: The Basics of Cloud Computing with AWS',
+                'location' => 'PCU Cavite Conference Center',
+                'summary'  => 'Attended an introductory seminar on cloud computing fundamentals and Amazon Web Services.',
+                'badge'    => 'Participant',
+                'image'    => 'images/certification/cloud computing.png',
+            ],
+            [
+                'year'     => '2024',
+                'type'     => 'Certificate',
+                'title'    => 'Git and GitHub',
+                'location' => 'PCU Cavite Conference Center',
+                'summary'  => 'Participated in a seminar on Git and GitHub, covering tools for version control and team collaboration.',
+                'badge'    => 'Participant',
+                'image'    => 'images/certification/git.png',
             ],
             [
                 'year'     => '2023',

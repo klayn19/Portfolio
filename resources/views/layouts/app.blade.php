@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome 6 Icons (Used for Facebook, Instagram, YouTube, GitHub, etc.) -->
+    <!-- Font Awesome 6 icons used throughout the portfolio -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Tailwind CSS (via Tailwind CDN for instant zero-config preview, plus Vite build support) -->
@@ -188,8 +188,32 @@
             document.getElementById('modalDescription').textContent = projectData.long_description || projectData.description;
             document.getElementById('modalImage').src = projectData.image;
             document.getElementById('modalImage').alt = projectData.title;
-            document.getElementById('modalLiveLink').href = projectData.live_url;
-            document.getElementById('modalGithubLink').href = projectData.github_url;
+
+            const liveLink = document.getElementById('modalLiveLink');
+            const githubLink = document.getElementById('modalGithubLink');
+            const hasLiveUrl = projectData.live_url && projectData.live_url !== '#';
+            const hasGithubUrl = projectData.github_url && projectData.github_url !== '#';
+
+            liveLink.href = hasLiveUrl ? projectData.live_url : '#';
+            liveLink.style.display = hasLiveUrl ? 'inline-flex' : 'none';
+
+            githubLink.href = hasGithubUrl ? projectData.github_url : '#';
+            githubLink.style.display = hasGithubUrl ? 'inline-flex' : 'none';
+
+            // Render demo accounts
+            const demoAccountsWrapper = document.getElementById('modalDemoAccounts');
+            const demoAccountsContent = document.getElementById('modalDemoAccountsContent');
+            if (projectData.demo_accounts && projectData.demo_accounts.length) {
+                demoAccountsWrapper.classList.remove('hidden');
+                demoAccountsContent.innerHTML = projectData.demo_accounts.map(account => 
+                    '<div class="mb-2 last:mb-0"><strong>' + (account.role || 'Account') + ':</strong> ' +
+                    'Email: <span class="font-mono text-xs">' + (account.email || '-') + '</span> | ' +
+                    'Password: <span class="font-mono text-xs">' + (account.password || '-') + '</span></div>'
+                ).join('');
+            } else {
+                demoAccountsWrapper.classList.add('hidden');
+                demoAccountsContent.innerHTML = '';
+            }
 
             // Render tags
             const tagsContainer = document.getElementById('modalTags');
@@ -201,6 +225,24 @@
                     span.textContent = tag;
                     tagsContainer.appendChild(span);
                 });
+            }
+
+            // Render screenshots
+            const screenshotsWrapper = document.getElementById('modalScreenshots');
+            const screenshotsGrid = document.getElementById('modalScreenshotsGrid');
+            const screenshots = projectData.screenshots || [projectData.image];
+            screenshotsGrid.innerHTML = '';
+            if (screenshots && screenshots.length) {
+                screenshotsWrapper.classList.remove('hidden');
+                screenshots.forEach((imageUrl) => {
+                    const img = document.createElement('img');
+                    img.src = imageUrl;
+                    img.alt = projectData.title + ' screenshot';
+                    img.className = 'w-full h-64 sm:h-72 md:h-80 object-cover rounded-xl border border-slate-200 shadow-sm';
+                    screenshotsGrid.appendChild(img);
+                });
+            } else {
+                screenshotsWrapper.classList.add('hidden');
             }
 
             // Show modal

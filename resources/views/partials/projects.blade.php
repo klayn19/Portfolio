@@ -16,10 +16,10 @@
                 Portfolio Showcase
             </span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Featured Projects &amp; Work
+                Featured Projects & Systems
             </h2>
             <p class="mt-4 text-base sm:text-lg text-slate-600">
-                A collection of web applications, academic systems, and personal projects I've built while practicing software development.
+                A selection of high-performance web applications, distributed APIs, and responsive interfaces I have architected and deployed.
             </p>
 
             {{-- ========================================================================= --}}
@@ -77,7 +77,7 @@
                         {{-- Quick View Overlay Trigger --}}
                         <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
                             <button type="button" 
-                                    onclick="openProjectModal({{ json_encode($project) }})" 
+                                    onclick='openProjectModal(@json($project))' 
                                     class="px-4 py-2 bg-white text-slate-900 font-semibold text-xs rounded-full shadow-lg hover:bg-indigo-600 hover:text-white transition-all transform translate-y-2 group-hover:translate-y-0">
                                 <i class="fa-regular fa-eye mr-1"></i> Quick View
                             </button>
@@ -143,7 +143,7 @@
 
                                 {{-- Details Button --}}
                                 <button type="button" 
-                                        onclick="openProjectModal({{ json_encode($project) }})" 
+                                        onclick='openProjectModal(@json($project))' 
                                         class="text-xs font-semibold text-slate-500 hover:text-indigo-600 transition-colors">
                                     Details &rarr;
                                 </button>
@@ -160,18 +160,18 @@
         </div>
 
         {{-- Call To Action Box below projects --}}
-        <div class="mt-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+        <div class="mt-16 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden" style="background: linear-gradient(100deg, #4338ca 0%, #6d28d9 100%); color: #ffffff;">
             <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
             
             <div class="max-w-2xl relative z-10">
-                <span class="text-xs font-bold uppercase tracking-wider text-indigo-200">Open for Opportunities</span>
-                <h3 class="text-2xl sm:text-3xl font-extrabold mt-1">Looking for an intern or junior web developer?</h3>
-                <p class="mt-2 text-indigo-100 text-sm sm:text-base leading-relaxed">
-                    I'm in my final year of college and ready to contribute to real-world projects. I'd love to bring my dedication, problem-solving mindset, and coding skills to your team.
+                <span class="text-xs font-bold uppercase tracking-wider text-indigo-200" style="color: #e0e7ff;">Have a custom project?</span>
+                <h3 class="text-2xl sm:text-3xl font-extrabold mt-1" style="color: #ffffff;">Ready to bring your software idea to reality?</h3>
+                <p class="mt-2 text-indigo-100 text-sm sm:text-base leading-relaxed" style="color: #e0e7ff;">
+                    Whether you need a full-stack Laravel platform, high-load API optimization, or responsive interfaces, I can help you ship fast with high quality.
                 </p>
                 <div class="mt-6 flex flex-wrap gap-4">
                     <a href="#contact" class="px-6 py-3 rounded-full bg-white text-indigo-700 font-bold text-sm shadow hover:bg-indigo-50 transition-all">
-                        Let's Get In Touch
+                        Let's Talk About Your Project
                     </a>
                     <a href="{{ $profile['socials']['github'] ?? 'https://github.com' }}" target="_blank" class="px-6 py-3 rounded-full bg-indigo-700/60 hover:bg-indigo-700 text-white font-semibold text-sm border border-indigo-400/40 transition-all flex items-center gap-2">
                         <i class="fa-brands fa-github"></i>

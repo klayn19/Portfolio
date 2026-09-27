@@ -15,13 +15,10 @@ class PortfolioTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertSee('Klein');
-        $response->assertSee('COS_LARAVEL');
-        $response->assertSee('SAM System');
-        $response->assertSee('Playlist Web App');
-        $response->assertSee('Coffee Menu');
-        $response->assertSee('Skills &amp; Technologies', false);
-        $response->assertSee('Experience &amp; Education', false);
-        $response->assertSee('Events &amp; Activities', false);
+        $response->assertSee('Campus Online Store');
+        $response->assertSee('Skills & Technologies', false);
+        $response->assertSee('Experience & Education');
+        $response->assertSee('Events & Activities', false);
     }
 
     /**

@@ -37,12 +37,12 @@
             {{-- ========================================================================= --}}
             {{-- [CUSTOMIZE HERE]: DIRECT CONTACT INFO & SOCIAL MEDIA                      --}}
             {{-- ========================================================================= --}}
-            <div class="lg:col-span-5 bg-gradient-to-br from-indigo-900 to-slate-900 text-white rounded-3xl p-8 sm:p-10 flex flex-col justify-between shadow-xl relative overflow-hidden">
+            <div class="lg:col-span-5 bg-indigo-950 text-white rounded-3xl p-8 sm:p-10 flex flex-col justify-between shadow-xl relative overflow-hidden" style="background: linear-gradient(135deg, #312e81 0%, #0f172a 100%);">
                 <div class="absolute -right-16 -top-16 w-48 h-48 bg-indigo-500/20 rounded-full blur-2xl"></div>
 
                 <div class="relative z-10">
                     <h3 class="text-2xl font-bold tracking-tight mb-2">Let's talk about everything!</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-8">
+                    <p class="text-slate-200 text-sm leading-relaxed mb-8">
                         Feel free to reach out directly via email, phone, or any of my social profiles.
                     </p>
 
@@ -52,7 +52,7 @@
                                 <i class="fa-regular fa-envelope text-base"></i>
                             </div>
                             <div>
-                                <span class="block text-xs text-slate-400 font-semibold uppercase">Email</span>
+                                <span class="block text-xs text-slate-200 font-semibold uppercase">Email</span>
                                 <a href="mailto:{{ $profile['email'] ?? 'alex.williams@example.com' }}" class="text-white hover:text-indigo-300 font-medium transition-colors">
                                     {{ $profile['email'] ?? 'alex.williams@example.com' }}
                                 </a>
@@ -64,7 +64,7 @@
                                 <i class="fa-solid fa-phone text-base"></i>
                             </div>
                             <div>
-                                <span class="block text-xs text-slate-400 font-semibold uppercase">Phone</span>
+                                <span class="block text-xs text-slate-200 font-semibold uppercase">Phone</span>
                                 <span class="text-white font-medium">
                                     {{ $profile['phone'] ?? '+1 (555) 234-5678' }}
                                 </span>
@@ -76,7 +76,7 @@
                                 <i class="fa-solid fa-location-dot text-base"></i>
                             </div>
                             <div>
-                                <span class="block text-xs text-slate-400 font-semibold uppercase">Location</span>
+                                <span class="block text-xs text-slate-200 font-semibold uppercase">Location</span>
                                 <span class="text-white font-medium">
                                     {{ $profile['location'] ?? 'San Francisco, CA' }}
                                 </span>
@@ -86,19 +86,11 @@
                 </div>
 
                 <div class="mt-10 pt-6 border-t border-white/10 relative z-10">
-                    <span class="block text-xs text-slate-400 font-semibold uppercase mb-3">Connect on Social</span>
+                    <span class="block text-xs text-slate-200 font-semibold uppercase mb-3">Connect on Social</span>
                     <div class="flex items-center gap-3">
                         {{-- Facebook --}}
                         <a href="{{ $profile['socials']['facebook'] ?? '#' }}" target="_blank" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-indigo-900 text-white flex items-center justify-center transition-all">
                             <i class="fa-brands fa-facebook-f text-sm"></i>
-                        </a>
-                        {{-- Instagram --}}
-                        <a href="{{ $profile['socials']['instagram'] ?? '#' }}" target="_blank" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-indigo-900 text-white flex items-center justify-center transition-all">
-                            <i class="fa-brands fa-instagram text-sm"></i>
-                        </a>
-                        {{-- YouTube --}}
-                        <a href="{{ $profile['socials']['youtube'] ?? '#' }}" target="_blank" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-indigo-900 text-white flex items-center justify-center transition-all">
-                            <i class="fa-brands fa-youtube text-sm"></i>
                         </a>
                         {{-- GitHub --}}
                         <a href="{{ $profile['socials']['github'] ?? '#' }}" target="_blank" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-indigo-900 text-white flex items-center justify-center transition-all">

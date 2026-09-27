@@ -14,19 +14,19 @@
                     About Me
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-                    Building Practical Web Apps &amp; Growing as a Developer
+                    Crafting Clean Code & High-Performance Web Applications
                 </h2>
                 
                 {{-- Detailed Narrative --}}
                 <div class="mt-6 space-y-4 text-slate-600 text-base leading-relaxed">
                     <p>
-                        Hello! I am <strong class="text-slate-900 font-semibold">{{ $profile['name'] ?? 'Klein' }}</strong>, a 4th-year student passionate about web development and building clean, practical applications with <strong class="text-indigo-600 font-semibold">Laravel and PHP</strong>.
+                        Hello! I am <strong class="text-slate-900 font-semibold">{{ $profile['name'] ?? 'Alex Williams' }}</strong>, a passionate software developer specializing in building reliable, elegant, and secure web applications using the <strong class="text-indigo-600 font-semibold">Laravel ecosystem</strong>.
                     </p>
                     <p>
-                        Most of my coding experience comes from working on university capstone systems, course laboratories, and personal projects like educational platforms, monitoring tools, and interactive web apps.
+                        With a deep dedication to clean software architecture, I focus on turning complex business requirements into intuitive, blazing-fast digital products. Whether designing relational schemas, writing expressive Eloquent models, or crafting pixel-perfect interfaces, I take pride in quality execution.
                     </p>
                     <p>
-                        As I prepare to graduate, I'm actively seeking an internship or junior developer role where I can contribute, learn from experienced engineers, and continue leveling up my skills with a great team.
+                        I work remotely with clients and distributed teams across timezones, practicing agile methodologies, test-driven development, and asynchronous communication to ensure seamless collaboration.
                     </p>
                 </div>
 
@@ -49,41 +49,41 @@
                 
                 <div class="p-5 rounded-2xl border border-slate-100 bg-slate-50/60 hover:bg-white hover:border-indigo-200 hover:shadow-md transition-all">
                     <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center mb-3">
-                        <i class="fa-solid fa-code text-lg"></i>
+                        <i class="fa-solid fa-layer-group text-lg"></i>
                     </div>
-                    <h3 class="font-bold text-slate-900 text-base">Web Development</h3>
+                    <h3 class="font-bold text-slate-900 text-base">Clean MVC & Domain Architecture</h3>
                     <p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
-                        Building clean, responsive web apps using Laravel, PHP, Blade templates, and Tailwind CSS.
+                        Writing decoupled, testable, and maintainable code adhering to SOLID principles and Laravel best practices.
                     </p>
                 </div>
 
                 <div class="p-5 rounded-2xl border border-slate-100 bg-slate-50/60 hover:bg-white hover:border-indigo-200 hover:shadow-md transition-all">
                     <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center mb-3">
-                        <i class="fa-solid fa-database text-lg"></i>
+                        <i class="fa-solid fa-gauge-high text-lg"></i>
                     </div>
-                    <h3 class="font-bold text-slate-900 text-base">Database &amp; Back-End</h3>
+                    <h3 class="font-bold text-slate-900 text-base">High-Load Optimization</h3>
                     <p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
-                        Designing relational databases in MySQL and SQLite, writing queries, and handling CRUD logic and APIs.
+                        Database indexing, Redis caching, queued background workers, and asynchronous job pipelines.
                     </p>
                 </div>
 
                 <div class="p-5 rounded-2xl border border-slate-100 bg-slate-50/60 hover:bg-white hover:border-indigo-200 hover:shadow-md transition-all">
                     <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-3">
-                        <i class="fa-solid fa-puzzle-piece text-lg"></i>
+                        <i class="fa-solid fa-laptop-code text-lg"></i>
                     </div>
-                    <h3 class="font-bold text-slate-900 text-base">Problem Solving</h3>
+                    <h3 class="font-bold text-slate-900 text-base">Modern Front-End</h3>
                     <p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
-                        Breaking down requirements step-by-step and debugging software issues with patience and focus.
+                        Crafting responsive, accessible, mobile-first interfaces using Tailwind CSS, Blade, and modern JS.
                     </p>
                 </div>
 
                 <div class="p-5 rounded-2xl border border-slate-100 bg-slate-50/60 hover:bg-white hover:border-indigo-200 hover:shadow-md transition-all">
                     <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-3">
-                        <i class="fa-solid fa-graduation-cap text-lg"></i>
+                        <i class="fa-solid fa-globe text-lg"></i>
                     </div>
-                    <h3 class="font-bold text-slate-900 text-base">Ready to Learn &amp; Work</h3>
+                    <h3 class="font-bold text-slate-900 text-base">Remote & Budget Friendly</h3>
                     <p class="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
-                        Eager to adapt to team workflows, collaborate using Git, and quickly pick up new tools and frameworks.
+                        Independent remote setup that saves workplace overhead while providing predictable milestones.
                     </p>
                 </div>
 

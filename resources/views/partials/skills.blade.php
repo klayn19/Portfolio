@@ -8,13 +8,13 @@
         
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span class="inline-block px-3.5 py-1 text-xs font-semibold tracking-wider text-indigo-700 uppercase bg-indigo-50 rounded-full border border-indigo-100 mb-3">
-                Technical Toolkit
+                Technical Mastery
             </span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Skills &amp; Technologies
+                Skills & Technologies
             </h2>
             <p class="mt-4 text-base sm:text-lg text-slate-600">
-                Technologies and tools I work with in school coursework, personal projects, and continuous self-study.
+                My everyday engineering toolkit for designing, building, and deploying secure, enterprise-grade applications.
             </p>
         </div>
 
@@ -38,17 +38,11 @@
                         <div class="space-y-4">
                             @foreach ($items as $skill)
                                 <div>
-                                    <div class="flex items-center justify-between text-xs font-semibold mb-1.5">
+                                    <div class="flex items-center text-xs font-semibold">
                                         <div class="flex items-center gap-2 text-slate-800">
                                             <i class="{{ $skill['icon'] }} text-indigo-500 w-4 text-center"></i>
                                             <span>{{ $skill['name'] }}</span>
                                         </div>
-                                        <span class="text-slate-400">{{ $skill['level'] }}%</span>
-                                    </div>
-                                    {{-- Animated Progress Bar --}}
-                                    <div class="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
-                                        <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-1.5 rounded-full transition-all duration-700" 
-                                             style="width: {{ $skill['level'] }}%"></div>
                                     </div>
                                 </div>
                             @endforeach
@@ -57,7 +51,7 @@
 
                     {{-- Bottom Pill --}}
                     <div class="mt-6 pt-4 border-t border-slate-50 text-center">
-                        <span class="text-[11px] text-slate-400 font-medium">Hands-on Experience</span>
+                        <span class="text-[11px] text-slate-400 font-medium">Production Verified</span>
                     </div>
                 </div>
             @endforeach

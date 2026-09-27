@@ -27,6 +27,12 @@
             @foreach ($events as $event)
                 <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/80 shadow-sm card-lift flex flex-col justify-between">
                     <div>
+                        @if(!empty($event['image']))
+                            <a href="{{ asset($event['image']) }}" target="_blank" rel="noopener noreferrer" class="block mb-5 overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+                                <img src="{{ asset($event['image']) }}" alt="Certificate: {{ $event['title'] }}" loading="lazy" class="w-full h-64 sm:h-72 object-contain">
+                            </a>
+                        @endif
+
                         <div class="flex items-center justify-between gap-2 mb-3">
                             <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 flex items-center gap-1.5">
                                 <i class="fa-regular fa-calendar text-indigo-400"></i>
