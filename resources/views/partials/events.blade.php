@@ -9,10 +9,10 @@
         
         <div class="text-center max-w-3xl mx-auto mb-16">
             <span class="inline-block px-3.5 py-1 text-xs font-semibold tracking-wider text-indigo-700 uppercase bg-indigo-50 rounded-full border border-indigo-100 mb-3">
-                Academic &amp; Tech Milestones
+                Academic & Tech Milestones
             </span>
             <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Events &amp; Activities
+                Events & Activities
             </h2>
             <p class="mt-4 text-base sm:text-lg text-slate-600">
                 Competitions, seminars, and tech events I've joined or participated in as a student.

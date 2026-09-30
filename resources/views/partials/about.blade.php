@@ -16,8 +16,7 @@
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                     Crafting Clean Code & High-Performance Web Applications
                 </h2>
-                
-                {{-- Detailed Narrative --}}
+
                 <div class="mt-6 space-y-4 text-slate-600 text-base leading-relaxed">
                     <p>
                         Hello! I am <strong class="text-slate-900 font-semibold">{{ $profile['name'] ?? 'Alex Williams' }}</strong>, a passionate software developer specializing in building reliable, elegant, and secure web applications using the <strong class="text-indigo-600 font-semibold">Laravel ecosystem</strong>.
@@ -30,10 +29,6 @@
                     </p>
                 </div>
 
-                {{-- ========================================================================= --}}
-                {{-- [CUSTOMIZE HERE]: STAT METRICS GRID                                       --}}
-                {{-- Values passed from $stats array in PortfolioController.php                --}}
-                {{-- ========================================================================= --}}
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-8 border-t border-slate-100">
                     @foreach ($stats as $stat)
                         <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 text-center">
@@ -44,10 +39,8 @@
                 </div>
             </div>
 
-            {{-- Right Column: 4 Key Pillars / Strengths --}}
             <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
-                
-                <div class="p-5 rounded-2xl border border-slate-100 bg-slate-50/60 hover:bg-white hover:border-indigo-200 hover:shadow-md transition-all">
+                <div class="p-5 rounded-2xl border border-slate-200 bg-white hover:border-indigo-200 hover:shadow-sm transition-all">
                     <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center mb-3">
                         <i class="fa-solid fa-layer-group text-lg"></i>
                     </div>
@@ -57,7 +50,7 @@
                     </p>
                 </div>
 
-                <div class="p-5 rounded-2xl border border-slate-100 bg-slate-50/60 hover:bg-white hover:border-indigo-200 hover:shadow-md transition-all">
+                <div class="p-5 rounded-2xl border border-slate-200 bg-white hover:border-indigo-200 hover:shadow-sm transition-all">
                     <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center mb-3">
                         <i class="fa-solid fa-gauge-high text-lg"></i>
                     </div>
@@ -67,7 +60,7 @@
                     </p>
                 </div>
 
-                <div class="p-5 rounded-2xl border border-slate-100 bg-slate-50/60 hover:bg-white hover:border-indigo-200 hover:shadow-md transition-all">
+                <div class="p-5 rounded-2xl border border-slate-200 bg-white hover:border-indigo-200 hover:shadow-sm transition-all">
                     <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-3">
                         <i class="fa-solid fa-laptop-code text-lg"></i>
                     </div>
@@ -77,7 +70,7 @@
                     </p>
                 </div>
 
-                <div class="p-5 rounded-2xl border border-slate-100 bg-slate-50/60 hover:bg-white hover:border-indigo-200 hover:shadow-md transition-all">
+                <div class="p-5 rounded-2xl border border-slate-200 bg-white hover:border-indigo-200 hover:shadow-sm transition-all">
                     <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-3">
                         <i class="fa-solid fa-globe text-lg"></i>
                     </div>
@@ -86,7 +79,6 @@
                         Independent remote setup that saves workplace overhead while providing predictable milestones.
                     </p>
                 </div>
-
             </div>
 
         </div>

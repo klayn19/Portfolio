@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMessage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PortfolioController extends Controller
 {
@@ -61,7 +63,7 @@ class PortfolioController extends Controller
         $projects = [
             [
                 'id'          => 1,
-                'title'       => 'COS_LARAVEL (Clash of Subjects)',
+                'title'       => 'Campus Online Store',
                 'category'    => 'fullstack',
                 'category_label' => 'Full-Stack / Unity API',
                 'description' => 'A gamified learning web platform with student, teacher, and admin dashboards, integrated with a Unity quiz game API.',
@@ -297,8 +299,8 @@ class PortfolioController extends Controller
             'message' => 'required|string|min:10|max:2000',
         ]);
 
-        // In a live production app, you can send an email here using:
-        // Mail::to(config('mail.from.address'))->send(new ContactMessage($validated));
+        Mail::to('klaynsantos19@gmail.com')
+            ->send(new ContactMessage($validated));
 
         return back()->with('success', 'Thank you! Your message has been sent successfully. I will get back to you shortly.');
     }

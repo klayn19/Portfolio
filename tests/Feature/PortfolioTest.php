@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
 
 class PortfolioTest extends TestCase
@@ -26,12 +27,18 @@ class PortfolioTest extends TestCase
      */
     public function test_contact_form_submission(): void
     {
+        Mail::fake();
+
         $response = $this->post('/contact', [
             'name'    => 'John Doe',
             'email'   => 'john@example.com',
             'subject' => 'Project Inquiry',
             'message' => 'Hello Alex, I would love to discuss a new Laravel project with you.',
         ]);
+
+        Mail::assertSent(\App\Mail\ContactMessage::class, function ($mail) {
+            return $mail->hasTo('klaynsantos19@gmail.com');
+        });
 
         $response->assertSessionHas('success');
         $response->assertRedirect();

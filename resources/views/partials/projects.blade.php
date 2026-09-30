@@ -159,27 +159,5 @@
             @endforelse
         </div>
 
-        {{-- Call To Action Box below projects --}}
-        <div class="mt-16 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden" style="background: linear-gradient(100deg, #4338ca 0%, #6d28d9 100%); color: #ffffff;">
-            <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
-            
-            <div class="max-w-2xl relative z-10">
-                <span class="text-xs font-bold uppercase tracking-wider text-indigo-200" style="color: #e0e7ff;">Have a custom project?</span>
-                <h3 class="text-2xl sm:text-3xl font-extrabold mt-1" style="color: #ffffff;">Ready to bring your software idea to reality?</h3>
-                <p class="mt-2 text-indigo-100 text-sm sm:text-base leading-relaxed" style="color: #e0e7ff;">
-                    Whether you need a full-stack Laravel platform, high-load API optimization, or responsive interfaces, I can help you ship fast with high quality.
-                </p>
-                <div class="mt-6 flex flex-wrap gap-4">
-                    <a href="#contact" class="px-6 py-3 rounded-full bg-white text-indigo-700 font-bold text-sm shadow hover:bg-indigo-50 transition-all">
-                        Let's Talk About Your Project
-                    </a>
-                    <a href="{{ $profile['socials']['github'] ?? 'https://github.com' }}" target="_blank" class="px-6 py-3 rounded-full bg-indigo-700/60 hover:bg-indigo-700 text-white font-semibold text-sm border border-indigo-400/40 transition-all flex items-center gap-2">
-                        <i class="fa-brands fa-github"></i>
-                        <span>See All on GitHub</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
     </div>
 </section>
