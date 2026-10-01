@@ -106,8 +106,10 @@
             {{-- Form submits via POST to route('portfolio.contact')                      --}}
             {{-- ========================================================================= --}}
             <div class="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-sm">
-                
-                <form action="{{ route('portfolio.contact') }}" method="POST" class="space-y-6">
+
+                <div id="contact-status" class="hidden mb-4 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800"></div>
+
+                <form id="contact-form" action="{{ route('portfolio.contact') }}" method="POST" class="space-y-6">
                     @csrf
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -192,3 +194,71 @@
 
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('contact-form');
+        const statusBox = document.getElementById('contact-status');
+
+        if (!form) {
+            return;
+        }
+
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton ? submitButton.innerHTML : '';
+
+        form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            if (!submitButton) {
+                return;
+            }
+
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Sending...</span>';
+
+            const formData = new FormData(form);
+            const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-CSRF-TOKEN': csrfToken || '',
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    credentials: 'same-origin'
+                });
+
+                const data = await response.json().catch(() => ({}));
+
+                if (!response.ok) {
+                    const errors = data.errors || {};
+                    const firstError = Object.values(errors)[0]?.[0] || data.message || 'Please check your form and try again.';
+                    throw new Error(firstError);
+                }
+
+                if (statusBox) {
+                    statusBox.textContent = data.message || 'Thank you! Your message has been sent successfully.';
+                    statusBox.classList.remove('hidden', 'border-red-200', 'bg-red-50', 'text-red-800');
+                    statusBox.classList.add('border-emerald-200', 'bg-emerald-50', 'text-emerald-800');
+                }
+
+                form.reset();
+            } catch (error) {
+                if (statusBox) {
+                    statusBox.textContent = error.message || 'Something went wrong. Please try again.';
+                    statusBox.classList.remove('hidden', 'border-emerald-200', 'bg-emerald-50', 'text-emerald-800');
+                    statusBox.classList.add('border-red-200', 'bg-red-50', 'text-red-800');
+                }
+            } finally {
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalButtonText;
+                }
+            }
+        });
+    });
+</script>

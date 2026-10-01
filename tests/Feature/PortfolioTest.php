@@ -29,19 +29,21 @@ class PortfolioTest extends TestCase
     {
         Mail::fake();
 
-        $response = $this->post('/contact', [
-            'name'    => 'John Doe',
-            'email'   => 'john@example.com',
-            'subject' => 'Project Inquiry',
-            'message' => 'Hello Alex, I would love to discuss a new Laravel project with you.',
-        ]);
+        $response = $this->withHeader('Accept', 'application/json')
+            ->post('/contact', [
+                'name'    => 'John Doe',
+                'email'   => 'john@example.com',
+                'subject' => 'Project Inquiry',
+                'message' => 'Hello Alex, I would love to discuss a new Laravel project with you.',
+            ]);
 
         Mail::assertSent(\App\Mail\ContactMessage::class, function ($mail) {
             return $mail->hasTo('klaynsantos19@gmail.com');
         });
 
-        $response->assertSessionHas('success');
-        $response->assertRedirect();
+        $response->assertOk();
+        $response->assertJsonPath('success', true);
+        $response->assertJsonPath('message', 'Thank you! Your message has been sent successfully. I will get back to you shortly.');
     }
 
     /**

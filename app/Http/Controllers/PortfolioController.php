@@ -302,6 +302,15 @@ class PortfolioController extends Controller
         Mail::to('klaynsantos19@gmail.com')
             ->send(new ContactMessage($validated));
 
-        return back()->with('success', 'Thank you! Your message has been sent successfully. I will get back to you shortly.');
+        $message = 'Thank you! Your message has been sent successfully. I will get back to you shortly.';
+
+        if ($request->expectsJson() || $request->wantsJson() || $request->ajax()) {
+            return response()->json([
+                'success' => true,
+                'message' => $message,
+            ]);
+        }
+
+        return back()->with('success', $message);
     }
 }
