@@ -248,11 +248,7 @@
 
                 form.reset();
             } catch (error) {
-                if (statusBox) {
-                    statusBox.textContent = error.message || 'Something went wrong. Please try again.';
-                    statusBox.classList.remove('hidden', 'border-emerald-200', 'bg-emerald-50', 'text-emerald-800');
-                    statusBox.classList.add('border-red-200', 'bg-red-50', 'text-red-800');
-                }
+                console.error('Contact form submission failed:', error);
             } finally {
                 if (submitButton) {
                     submitButton.disabled = false;
