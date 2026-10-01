@@ -10,6 +10,13 @@ if [ -n "${RENDER_EXTERNAL_URL:-}" ]; then
     export ASSET_URL="$RENDER_EXTERNAL_URL"
 fi
 
+# Create SQLite database file if it doesn't exist
+mkdir -p /var/www/html/database
+touch /var/www/html/database/database.sqlite
+chown www-data:www-data /var/www/html/database/database.sqlite
+
+php artisan migrate --force
 php artisan config:cache
 php artisan route:cache
+exec apache2-foreground
 exec apache2-foreground
