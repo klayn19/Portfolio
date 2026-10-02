@@ -121,7 +121,7 @@ class PortfolioController extends Controller
                     'images/coffee shop/Screenshot 2026-09-27 164727.png',
                 ],
                 'tags'        => ['Python', 'CustomTkinter', 'SQLite', 'Pillow', 'GUI Application'],
-                'live_url'    => '#',
+                'live_url'    => null,
                 'github_url'  => 'https://github.com/klayn19/coffeeShop-Menu-inventory',
                 'featured'    => true,
             ],
