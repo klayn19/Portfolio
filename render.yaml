@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: klayn-portfolio
+    name: portfolio-klein
     runtime: docker
     plan: free
     region: singapore
@@ -13,7 +13,7 @@ services:
       - key: APP_DEBUG
         value: "true"
       - key: APP_URL
-        value: https://portfolio-kujo.onrender.com
+        value: https://portfolio-kuju.onrender.com
       - key: APP_KEY
         sync: false
       - key: LOG_CHANNEL

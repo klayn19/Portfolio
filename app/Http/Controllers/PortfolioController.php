@@ -32,7 +32,7 @@ class PortfolioController extends Controller
             'avatar'      => 'images/klayn.jpg',
             
             // Your contact & location details
-            'email'       => 'klaynsantos19@example.com',
+            'email'       => 'klaynsantos19@gmail.com',
             'phone'       => '+63 976 377 1517',
             'location'    => 'Dasmariñas, Cavite',
             'availability'=> 'Available for Internships & Junior Roles',

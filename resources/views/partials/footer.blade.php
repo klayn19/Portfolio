@@ -18,16 +18,6 @@
                 </p>
             </div>
 
-            {{-- Footer Links --}}
-            <div class="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm font-medium text-slate-500">
-                <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
-                <a href="#skills" class="hover:text-blue-600 transition-colors">Skills</a>
-                <a href="#projects" class="hover:text-blue-600 transition-colors">Projects</a>
-                <a href="#experience" class="hover:text-blue-600 transition-colors">Experience</a>
-                <a href="#events" class="hover:text-blue-600 transition-colors">Events</a>
-                <a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a>
-            </div>
-
             {{-- Back to top button --}}
             <div>
                 <a href="#hero" aria-label="Back to top" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 hover:bg-indigo-600 hover:text-white text-slate-600 transition-all shadow-sm">

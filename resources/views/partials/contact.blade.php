@@ -53,8 +53,8 @@
                             </div>
                             <div>
                                 <span class="block text-[10px] text-slate-500 font-bold uppercase tracking-[0.18em] mb-1">Email</span>
-                                <a href="mailto:{{ $profile['email'] ?? 'alex.williams@example.com' }}" class="text-slate-900 hover:text-indigo-600 font-medium transition-colors">
-                                    {{ $profile['email'] ?? 'alex.williams@example.com' }}
+                                <a href="mailto:{{ $profile['email'] ?? 'klaynsantos19@gmail.com' }}" class="text-slate-900 hover:text-indigo-600 font-medium transition-colors">
+                                    {{ $profile['email'] ?? 'klaynsantos19@gmail.com' }}
                                 </a>
                             </div>
                         </div>
