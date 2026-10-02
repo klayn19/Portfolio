@@ -27,11 +27,6 @@
                 <i class="fa-regular fa-envelope"></i>
                 <span>Contact Me</span>
             </a>
-
-            <a href="#about" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-full text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">
-                <i class="fa-solid fa-arrow-down"></i>
-                <span>About Alex</span>
-            </a>
         </div>
     </div>
 </section>
