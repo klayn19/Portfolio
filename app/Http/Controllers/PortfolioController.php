@@ -100,7 +100,7 @@ class PortfolioController extends Controller
                 'description' => 'personalized playback interface.',
                 'long_description' => 'A responsive web application built with PHP, Bootstrap, and MySQL featuring a stylized user interface. Includes account registration, credential validation, session handling, and access to curated music playlists with smooth navigation.',
                 'image'       => 'images/projects/project3.svg',
-                'tags'        => ['PHP', 'Bootstrap', 'MySQL', 'HTML5/CSS3', 'JavaScript'],
+                'tags'        => ['HTML5/CSS3', 'JavaScript'],
                 'live_url'    => 'https://klayn19.github.io/playlist/',
                 'github_url'  => 'https://github.com/klayn19/playlist',
                 'featured'    => true,
