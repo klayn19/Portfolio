@@ -63,7 +63,7 @@ class PortfolioController extends Controller
         $projects = [
             [
                 'id'          => 1,
-                'title'       => 'Clash of Subjects,
+                'title'       => 'Clash of Subjects',
                 'category'    => 'fullstack',
                 'category_label' => 'Full-Stack / Unity API',
                 'description' => 'A gamified learning web platform with student, teacher, and admin dashboards, integrated with a Unity quiz game API.',
