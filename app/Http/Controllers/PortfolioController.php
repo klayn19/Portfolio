@@ -63,7 +63,7 @@ class PortfolioController extends Controller
         $projects = [
             [
                 'id'          => 1,
-                'title'       => 'Campus Online Store',
+                'title'       => 'Clash of Subjects,
                 'category'    => 'fullstack',
                 'category_label' => 'Full-Stack / Unity API',
                 'description' => 'A gamified learning web platform with student, teacher, and admin dashboards, integrated with a Unity quiz game API.',
@@ -97,7 +97,7 @@ class PortfolioController extends Controller
                 'title'       => 'Playlist Web App',
                 'category'    => 'frontend',
                 'category_label' => 'Frontend / Web App',
-                'description' => 'An interactive music playlist portal with user registration, secure session authentication, and personalized playback interface.',
+                'description' => 'personalized playback interface.',
                 'long_description' => 'A responsive web application built with PHP, Bootstrap, and MySQL featuring a stylized user interface. Includes account registration, credential validation, session handling, and access to curated music playlists with smooth navigation.',
                 'image'       => 'images/projects/project3.svg',
                 'tags'        => ['PHP', 'Bootstrap', 'MySQL', 'HTML5/CSS3', 'JavaScript'],
