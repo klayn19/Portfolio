@@ -72,6 +72,11 @@ class PortfolioController extends Controller
                 'tags'        => ['Laravel', 'PHP', 'MySQL', 'Unity Game API', 'Docker', 'Blade'],
                 'live_url'    => 'https://clash-of-subjects.onrender.com',
                 'github_url'  => 'https://github.com/klayn19/COS_LARAVEL',
+                'demo_accounts' => [
+                    ['role' => 'Admin', 'email' => 'admin@cos.com', 'password' => 'admin1234'],
+                    ['role' => 'Teacher', 'email' => 'teacher@cos.com', 'password' => 'teacher1234'],
+                    ['role' => 'Student', 'email' => 'student@cos.com', 'password' => 'student1234'],
+                ],
                 'featured'    => true,
             ],
             [
