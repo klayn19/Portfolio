@@ -25,7 +25,7 @@ class PortfolioController extends Controller
             'name'        => 'Klein',             // Your full name shown in the Hero section
             'title'       => '4th Year Student & Aspiring Web Developer', 
             // Bio text: natural, genuine, non-AI tone for a graduating student
-            'bio'         => "Hey, I'm Klein! I'm a 4th-year student passionate about web development and building clean, practical applications. I mainly work with Laravel, PHP, MySQL, and Tailwind CSS. Always curious to learn new tools and ready to take on junior developer or internship opportunities.",
+            'bio'         => "Hey, I'm Klein! I'm a 4th-year student passionate about web development and building clean, practical applications. I mainly work with Laravel, PHP, MySQL, and Tailwind CSS.",
             
             // Avatar image path (Place your image inside public/images/)
             // Use the real uploaded photo file already saved in the project.
