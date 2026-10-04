@@ -24,9 +24,6 @@
                     <p>
                         With a deep dedication to clean software architecture, I focus on turning complex business requirements into intuitive, blazing-fast digital products. Whether designing relational schemas, writing expressive Eloquent models, or crafting pixel-perfect interfaces, I take pride in quality execution.
                     </p>
-                    <p>
-                        I work remotely with clients and distributed teams across timezones, practicing agile methodologies, test-driven development, and asynchronous communication to ensure seamless collaboration.
-                    </p>
                 </div>
 
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-8 border-t border-slate-100">
