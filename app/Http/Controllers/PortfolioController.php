@@ -31,10 +31,9 @@ class PortfolioController extends Controller
             // Use the real uploaded photo file already saved in the project.
             'avatar'      => 'images/klayn.jpg',
             
-            // Your contact & location details
+            // Your contact details
             'email'       => 'klaynsantos19@gmail.com',
             'phone'       => '+63 976 377 1517',
-            'location'    => 'Dasmariñas, Cavite',
             'availability'=> 'Available for Internships & Junior Roles',
             
             // Social media links
@@ -176,7 +175,7 @@ class PortfolioController extends Controller
                 'role'     => 'Lead Developer (Capstone Project)',
                 'company'  => 'University Capstone Team',
                 'location' => 'Campus / Hybrid',
-                'summary'  => 'Leading the web development for our 4th-year capstone project, coordinating database design, backend logic, and frontend views.',
+                'summary'  => 'Leading the web development for our 3rd-year capstone project, coordinating database design, backend logic, and frontend views.',
                 'achievements' => [
                     'Designed the database schema and implemented core modules using Laravel & MySQL',
                     'Managed team tasks and code versions through GitHub repositories',
@@ -205,7 +204,7 @@ class PortfolioController extends Controller
             [
                 'year'     => '2025',
                 'type'     => 'Academic Milestone',
-                'title'    => '4th-Year Capstone Project Defense',
+                'title'    => '3rd-Year Capstone Project Defense',
                 'location' => 'University Department',
                 'summary'  => 'Successfully presented and demonstrated our web system prototype to the faculty evaluation panel.',
                 'badge'    => 'Capstone Passed',

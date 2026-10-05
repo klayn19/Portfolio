@@ -71,17 +71,6 @@
                             </div>
                         </div>
 
-                        <div class="flex items-start gap-4">
-                            <div class="w-11 h-11 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center shrink-0 text-indigo-600">
-                                <i class="fa-solid fa-location-dot text-base"></i>
-                            </div>
-                            <div>
-                                <span class="block text-[10px] text-slate-500 font-bold uppercase tracking-[0.18em] mb-1">Location</span>
-                                <span class="text-slate-900 font-medium">
-                                    {{ $profile['location'] ?? 'San Francisco, CA' }}
-                                </span>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
